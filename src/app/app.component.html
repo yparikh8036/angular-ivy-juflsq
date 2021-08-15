@@ -1,4 +1,25 @@
-<hello name="{{ name }}"></hello>
 <p>
   Start editing to see some magic happen :)
+</p>
+
+<br />
+<br />
+
+<!-- <input type="search" [(ngModel)]="name" />
+
+{{ name }} -->
+
+<form (ngSubmit)="changeName(nameInput.value)">
+  <input
+    type="text"
+    placeholder="Type Your New Name"
+    #nameInput
+    ngModel
+    required
+  />
+  <input type="submit" />
+</form>
+
+<p *ngIf="nameInput.value">
+  {{ name }}
 </p>
